@@ -10,7 +10,7 @@ from homeassistant.components.sensor import DOMAIN
 from homeassistant.const import (CONF_NAME, CONF_HOST, CONF_TOKEN, ATTR_TEMPERATURE)
 from homeassistant.helpers.entity import Entity
 from homeassistant.exceptions import PlatformNotReady
-from homeassistant.components.water_heater import (WaterHeaterDevice, SUPPORT_OPERATION_MODE, SUPPORT_TARGET_TEMPERATURE, STATE_ELECTRIC, ATTR_OPERATION_LIST, ATTR_OPERATION_MODE)
+from homeassistant.components.water_heater import (WaterHeaterEntity, SUPPORT_OPERATION_MODE, SUPPORT_TARGET_TEMPERATURE, STATE_ELECTRIC, ATTR_OPERATION_LIST, ATTR_OPERATION_MODE)
 from miio import Device, DeviceException
 from datetime import timedelta
 
@@ -41,7 +41,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 
     add_devices(devices)
 
-class YunmiKettle(WaterHeaterDevice):
+class YunmiKettle(WaterHeaterEntity):
     """Representation of a YunmiKettle."""
 
     def __init__(self, device, name):
