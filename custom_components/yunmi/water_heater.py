@@ -16,9 +16,9 @@ from datetime import timedelta
 
 _LOGGER = logging.getLogger(__name__)
 
-STATE_NORMAL = "normal"
-STATE_WARM = "warm"
-STATE_BOILED = "boiled"
+STATE_NORMAL = "常温"
+STATE_WARM = "温水"
+STATE_BOILED = "开水"
 
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Perform the setup for Yunmi kettle."""
