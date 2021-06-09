@@ -2,6 +2,7 @@
   "domain": "yunmi",
   "name": "Yunmi",
   "documentation": "https://www.home-assistant.io/components/yunmi",
+  "version": "1.0",
   "requirements": [
     "construct>=2.9.45",
     "python-miio>=0.4.7"
